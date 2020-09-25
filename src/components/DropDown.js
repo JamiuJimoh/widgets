@@ -35,10 +35,10 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
 		<div ref={ref} className="ui form">
 			<div className="field">
 				<label className="label">{label}</label>
-				<div onClick={() => setOpen(!open)} className={`ui selection dropdown ${open ? 'visible active' : ''}`}>
+				<div onClick={() => setOpen(!open)} className={`ui selection dropdown ${open && 'visible active'}`}>
 					<i className="dropdown icon" />
 					<div className="text">{selected.label}</div>
-					<div className={`menu ${open ? 'visible transition' : ''}`}>{renderedOptions}</div>
+					<div className={`menu ${open && 'visible transition'}`}>{renderedOptions}</div>
 				</div>
 			</div>
 		</div>
