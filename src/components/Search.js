@@ -35,11 +35,11 @@ const Search = () => {
 				setResults(data.query.search);
 			};
 
-			if (term) {
+			if (debouncedTerm) {
 				search();
 			}
 		},
-		[ debouncedTerm ]
+		[ debouncedTerm]
 	);
 
 	const renderedResults = results.map((result) => {
